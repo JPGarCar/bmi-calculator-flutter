@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable_card.dart';
 import 'icon_text.dart';
-
-const activeBoxColor = Color(0xFF1D1E33);
-const inactiveBoxColor = Color(0xFF111328);
-const bottomContainerHeight = 80.0;
+import 'constants.dart';
 
 enum Gender {
   male,
@@ -39,8 +36,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: selectedGender == Gender.male
-                        ? activeBoxColor
-                        : inactiveBoxColor,
+                        ? kActiveBoxColor
+                        : kInactiveBoxColor,
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.mars,
                       label: "MALE",
@@ -55,8 +52,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: selectedGender == Gender.female
-                        ? activeBoxColor
-                        : inactiveBoxColor,
+                        ? kActiveBoxColor
+                        : kInactiveBoxColor,
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.venus,
                       label: "FEMALE",
@@ -66,12 +63,12 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Expanded(child: ReusableCard(color: activeBoxColor)),
+          Expanded(child: ReusableCard(color: kActiveBoxColor)),
           Expanded(
             child: Row(
               children: <Widget>[
-                Expanded(child: ReusableCard(color: activeBoxColor)),
-                Expanded(child: ReusableCard(color: activeBoxColor)),
+                Expanded(child: ReusableCard(color: kActiveBoxColor)),
+                Expanded(child: ReusableCard(color: kActiveBoxColor)),
               ],
             ),
           ),
@@ -79,7 +76,7 @@ class _InputPageState extends State<InputPage> {
             color: Color(0xFFEB1555),
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           )
         ],
       ),
