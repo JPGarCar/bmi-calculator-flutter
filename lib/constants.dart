@@ -15,3 +15,20 @@ const kNumHeightStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
 );
+
+const kLargeButtonText = TextStyle(
+  fontSize: 20.0,
+  fontWeight: FontWeight.bold,
+);
+
+final kSmallGreenText = TextStyle(
+  color: Colors.lightGreenAccent,
+  fontWeight: FontWeight.bold,
+  fontSize: 20,
+);
+
+final kBigNumberText = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
+final kBigTittle = TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold);
