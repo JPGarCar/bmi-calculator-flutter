@@ -4,6 +4,13 @@ import 'package:flutter/material.dart';
 import 'components/reusable_card.dart';
 
 class ResultsScreen extends StatelessWidget {
+  final String bmi;
+  final String tip;
+  final String status;
+
+  ResultsScreen(
+      {@required this.bmi, @required this.status, @required this.tip});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,19 +43,19 @@ class ResultsScreen extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "overweight",
+                      status.toUpperCase(),
                       style: kSmallGreenText,
                     ),
                   ),
                   Container(
                     child: Text(
-                      "BMI number",
+                      bmi,
                       style: kBigNumberText,
                     ),
                   ),
                   Container(
                     child: Text(
-                      "Explanation",
+                      tip,
                       textAlign: TextAlign.center,
                     ),
                   ),

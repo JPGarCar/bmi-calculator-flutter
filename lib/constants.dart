@@ -24,11 +24,11 @@ const kLargeButtonText = TextStyle(
 final kSmallGreenText = TextStyle(
   color: Colors.lightGreenAccent,
   fontWeight: FontWeight.bold,
-  fontSize: 20,
+  fontSize: 25,
 );
 
 final kBigNumberText = TextStyle(
-  fontSize: 50.0,
+  fontSize: 90.0,
   fontWeight: FontWeight.bold,
 );
 final kBigTittle = TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold);

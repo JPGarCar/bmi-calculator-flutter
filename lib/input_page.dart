@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/BMI_calculator.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/reusable_card.dart';
@@ -216,16 +217,23 @@ class _InputPageState extends State<InputPage> {
           BottomButton(
             text: "CALCULATE",
             nextPageFunction: () {
+              BMICalculator bmiCalc =
+                  BMICalculator(height: height, weight: weight);
+
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return ResultsScreen();
+                    return ResultsScreen(
+                      bmi: bmiCalc.calculateBMI(),
+                      tip: bmiCalc.getTip(),
+                      status: bmiCalc.getStatus(),
+                    );
                   },
                 ),
               );
             },
-          )
+          ),
         ],
       ),
       /*floatingActionButton: Theme(
